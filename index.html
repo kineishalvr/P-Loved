@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>P-Loved | Fashion Preloved</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">P-Loved</div>
+    <nav>
+      <ul>
+        <li><a href="#home" class="active">Beranda</a></li>
+        <li><a href="#produk">Produk</a></li>
+      </ul>
+    </nav>
+
+    <div class="nav-actions">
+      <button id="cartBtn" class="cart-btn" aria-label="Keranjang">
+        🛒 <span id="cartCount" class="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <h1>Timeless Pieces,<br>Endless Stories</h1>
+    <p>Jelajahi fashion preloved berkualitas — tampil gaya, tetap hemat, dan ramah bumi 🌍</p>
+    <a class="btn" href="#produk">Lihat Produk</a>
+  </section>
+
+  <!-- FILTER + PRODUK -->
+  <section id="produk">
+    <div class="page-header">
+      <h1>Telusuri Fashion Preloved 💕</h1>
+      <p>Pilih kategori dan temukan item fashion yang cocok untukmu!</p>
+    </div>
+
+    <div class="kategori-container">
+      <aside class="filter-section">
+        <h2>Filter Produk</h2>
+
+        <div class="filter-group">
+          <label for="filter-kategori">Kategori Utama</label>
+          <select id="filter-kategori">
+            <option>Semua</option>
+            <option>Brand</option>
+            <option>No Brand</option>
+            <option>Cutting Brand</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="filter-gender">Gender</label>
+          <select id="filter-gender">
+            <option>Semua</option>
+            <option>Pria</option>
+            <option>Wanita</option>
+            <option>Unisex</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="filter-jenis">Jenis Fashion</label>
+          <select id="filter-jenis">
+            <option>Semua</option>
+            <option>Baju</option>
+            <option>Kemeja</option>
+            <option>Rok</option>
+            <option>Celana</option>
+            <option>Dasi</option>
+            <option>Hijab</option>
+            <option>Ikat Pinggang</option>
+            <option>Jaket</option>
+            <option>Outer</option>
+            <option>Sweter</option>
+            <option>Hoodie</option>
+            <option>Kaos</option>
+            <option>Sepatu</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="filter-gaya">Gaya/Occasion</label>
+          <select id="filter-gaya">
+            <option>Semua</option>
+            <option>Casual</option>
+            <option>Formal</option>
+            <option>Party</option>
+            <option>Streetwear</option>
+            <option>Vintage</option>
+            <option>Sporty</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label for="filter-warna">Warna</label>
+          <select id="filter-warna">
+            <option>Semua</option>
+            <option>Putih</option>
+            <option>Hitam</option>
+            <option>Abu-abu</option>
+            <option>Biru</option>
+            <option>Hijau</option>
+            <option>Merah</option>
+            <option>Oranye</option>
+            <option>Kuning</option>
+            <option>Ungu</option>
+            <option>Pink</option>
+            <option>Cokelat</option>
+          </select>
+        </div>
+
+        <button class="btn filter-btn" id="applyFilter">Terapkan Filter</button>
+      </aside>
+
+      <section class="product-list" id="productList">
+        <!-- Rendered by script.js -->
+      </section>
+    </div>
+  </section>
+
+  <!-- MODAL: PRODUK -->
+  <div class="modal" id="productModal" aria-hidden="true">
+    <div class="modal-panel product-modal">
+      <button class="close-btn" id="closeProductModal" aria-label="Tutup">&times;</button>
+      <img id="modalImage" src="" alt="Gambar produk" />
+      <h2 id="modalTitle"></h2>
+      <p class="price" id="modalPrice"></p>
+      <p id="modalDesc"></p>
+
+      <div class="seller-mini" id="sellerMini">
+        <img id="sellerMiniImg" src="" alt="Foto penjual" />
+        <div style="flex:1">
+          <div id="sellerMiniName" style="font-weight:600"></div>
+          <div id="sellerMiniMeta" style="font-size:1rem;color:#666"></div>
+        </div>
+        <button class="link-btn" id="openSellerProfile">Lihat Profil Penjual</button>
+      </div>
+
+      <div style="margin-top:1rem;display:flex;gap:0.6rem;align-items:center;">
+        <button class="btn" id="addToCartBtn">Tambah ke Keranjang</button>
+        <button class="btn small" id="closeProductModal2">Tutup</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: PENJUAL -->
+  <div class="modal" id="sellerModal" aria-hidden="true">
+    <div class="modal-panel seller-modal">
+      <button class="close-btn" id="closeSellerModal" aria-label="Tutup">&times;</button>
+
+      <div class="seller-top">
+        <img id="sellerAvatar" src="" alt="Avatar penjual"/>
+        <div class="seller-meta">
+          <h3 id="sellerTitle"></h3>
+          <div class="rating-row">
+            <div id="sellerStars" class="stars"></div>
+            <div class="rating-number" id="sellerRatingNumber" style="margin-left:6px;"></div>
+          </div>
+          <p id="sellerLocation" class="muted"></p>
+        </div>
+      </div>
+
+      <hr/>
+
+      <div class="seller-stats">
+        <div><strong id="sellerProductsCount">0</strong><br/><span class="muted">Produk</span></div>
+        <div><strong id="sellerSoldCount">0</strong><br/><span class="muted">Terjual</span></div>
+      </div>
+
+      <h4>Produk lain dari penjual</h4>
+      <div class="mini-products" id="sellerProducts"></div>
+
+      <h4>Ulasan Pembeli</h4>
+      <div class="reviews" id="sellerReviews"></div>
+    </div>
+  </div>
+
+  <!-- MODAL: KERANJANG -->
+  <div class="modal" id="cartModal" aria-hidden="true">
+    <div class="modal-panel cart-panel">
+      <button class="close-btn" id="closeCartModal" aria-label="Tutup">&times;</button>
+      <h2>Keranjang Anda</h2>
+      <div id="cartItems"></div>
+      <div id="cartSummary" style="margin-top:1rem;font-weight:700"></div>
+      <div style="margin-top:1rem;display:flex;gap:0.6rem;">
+        <button class="btn" id="checkoutBtn">Checkout</button>
+        <button class="btn small" id="clearCartBtn">Kosongkan Keranjang</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>© 2025 P-Loved | Fashion Preloved Indonesia</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
