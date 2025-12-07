@@ -4,8 +4,8 @@
 }
 
 :root{
-  --pastel-blue:#AEC8FF;
-  --pastel-pink:#F8C8DC;
+  --pastel-blue:#871515d9;
+  --pastel-pink:#f4dac2;
   --white:#fff;
   --text-dark:#333;
   --muted:#777;
@@ -165,3 +165,4 @@ body{
 .star{font-size:1rem;color:#e0e0e0;display:inline-block}
 
 .star.full{color:#FFC107}
+
