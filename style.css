@@ -44,7 +44,7 @@ body{
 
 /* HERO */
 .hero{
-  padding:3.8rem 1.2rem;
+  padding:10.8rem 8.2rem;
   text-align:center;color:#fff;background:linear-gradient(135deg,var(--pastel-pink),var(--pastel-blue));
 }
 .hero h1{font-family:var(--font-logo);margin:0 0 .6rem 0;font-size:2.4rem}
@@ -163,4 +163,5 @@ body{
 
 /* star styles */
 .star{font-size:1rem;color:#e0e0e0;display:inline-block}
+
 .star.full{color:#FFC107}
