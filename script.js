@@ -9,7 +9,7 @@ const PRODUCTS = [
   { id:5, name:"Red Satin Party Dress", price:180000, priceText:"Rp180.000", img:"img/product7.jpg", kategori:"Cutting Brand", gender:"Wanita", jenis:"Dress", gaya:"Party", warna:"Merah", sellerId:203, desc:"Gaun satin berkilau untuk pesta."},
   { id:6, name:"Shiny Pink Skirt", price:90000, priceText:"Rp90.000", img:"img/product8.jpg", kategori:"Brand", gender:"Wanita", jenis:"Rok", gaya:"Party", warna:"Pink", sellerId:203, desc:"Rok pesta yang eye-catching."},
   { id:7, name:"Denim Jacket", price:120000, priceText:"Rp120.000", img:"img/product2.jpg", kategori:"Brand", gender:"Unisex", jenis:"Jaket", gaya:"Streetwear", warna:"Biru", sellerId:204, desc:"Denim jacket klasik."},
-  { id:8, name:"Black Oversized Hoodie", price:95000, priceText:"Rp95.000", img:"img/product9.jpg", kategori:"No Brand", gender:"Pria", jenis:"Hoodie", gaya:"Streetwear", warna:"Hitam", sellerId:204, desc:"Hoodie oversized keren."},
+  { id:8, name:"Black Oversized Hoodie", price:85000, priceText:"Rp95.000", img:"img/product9.jpg", kategori:"No Brand", gender:"Pria", jenis:"Hoodie", gaya:"Streetwear", warna:"Hitam", sellerId:204, desc:"Hoodie oversized keren."},
   { id:9, name:"Floral Skirt", price:65000, priceText:"Rp65.000", img:"img/product3.jpg", kategori:"No Brand", gender:"Wanita", jenis:"Rok", gaya:"Vintage", warna:"Pink", sellerId:205, desc:"Rok motif bunga, vibe vintage."},
   { id:10, name:"Retro Brown Cardigan", price:100000, priceText:"Rp100.000", img:"img/product10.jpg", kategori:"Cutting Brand", gender:"Wanita", jenis:"Outer", gaya:"Vintage", warna:"Cokelat", sellerId:205, desc:"Cardigan retro hangat."},
   { id:11, name:"Training Jogger Pants", price:75000, priceText:"Rp75.000", img:"img/product11.jpg", kategori:"Brand", gender:"Unisex", jenis:"Celana", gaya:"Sporty", warna:"Abu-abu", sellerId:206, desc:"Jogger nyaman untuk olahraga."},
@@ -364,4 +364,5 @@ addToCartBtn.addEventListener("click", ()=>{
    =========================== */
 document.getElementById("applyFilter").addEventListener("click", applyFilter);
 renderProductList(PRODUCTS);
+
 updateCartCount();
