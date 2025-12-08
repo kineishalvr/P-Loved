@@ -6,7 +6,7 @@ const PRODUCTS = [
   { id:2, name:"Basic White Tee", price:55000, priceText:"Rp55.000", img:"img/product4.jpg", kategori:"Brand", gender:"Unisex", jenis:"Kaos", gaya:"Casual", warna:"Putih", sellerId:201, desc:"Kaos putih basic, nyaman."},
   { id:3, name:"Formal Grey Shirt", price:110000, priceText:"Rp110.000", img:"img/product5.jpg", kategori:"Brand", gender:"Pria", jenis:"Kemeja", gaya:"Formal", warna:"Abu-abu", sellerId:202, desc:"Kemeja slim-fit, cocok formal."},
   { id:4, name:"Classic Black Blazer", price:150000, priceText:"Rp150.000", img:"img/product6.jpg", kategori:"Brand", gender:"Wanita", jenis:"Blazer", gaya:"Formal", warna:"Hitam", sellerId:202, desc:"Blazer elegan untuk acara resmi."},
-  { id:5, name:"Red Satin Party Dress", price:180000, priceText:"Rp180.000", img:"img/product7.jpg", kategori:"Cutting Brand", gender:"Wanita", jenis:"Dress", gaya:"Party", warna:"Merah", sellerId:203, desc:"Gaun satin berkilau untuk pesta."},
+  { id:5, name:"Red Satin Party Dress", price:150000, priceText:"Rp180.000", img:"img/product7.jpg", kategori:"Cutting Brand", gender:"Wanita", jenis:"Dress", gaya:"Party", warna:"Merah", sellerId:203, desc:"Gaun satin berkilau untuk pesta."},
   { id:6, name:"Shiny Pink Skirt", price:90000, priceText:"Rp90.000", img:"img/product8.jpg", kategori:"Brand", gender:"Wanita", jenis:"Rok", gaya:"Party", warna:"Pink", sellerId:203, desc:"Rok pesta yang eye-catching."},
   { id:7, name:"Denim Jacket", price:120000, priceText:"Rp120.000", img:"img/product2.jpg", kategori:"Brand", gender:"Unisex", jenis:"Jaket", gaya:"Streetwear", warna:"Biru", sellerId:204, desc:"Denim jacket klasik."},
   { id:8, name:"Black Oversized Hoodie", price:85000, priceText:"Rp95.000", img:"img/product9.jpg", kategori:"No Brand", gender:"Pria", jenis:"Hoodie", gaya:"Streetwear", warna:"Hitam", sellerId:204, desc:"Hoodie oversized keren."},
@@ -366,3 +366,4 @@ document.getElementById("applyFilter").addEventListener("click", applyFilter);
 renderProductList(PRODUCTS);
 
 updateCartCount();
+
